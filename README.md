@@ -1,7 +1,6 @@
 # Set up
 
-### 1) [Create](https://console.cloud.google.com/projectcreate) a new project in the
-Google Cloud console.
+### 1) [Create](https://console.cloud.google.com/projectcreate) a new project in the cloud console.
 
 ### 2) Authorize `gcloud` to manage your project resources from your local system.
 
