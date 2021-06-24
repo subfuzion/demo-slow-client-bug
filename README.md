@@ -1,14 +1,14 @@
 # Set up
 
-### 1) [Create](https://console.cloud.google.com/projectcreate) a new project in the cloud console.
+### 1) [Create](https://console.cloud.google.com/projectcreate) a new project in the cloud console
 
-### 2) Authorize `gcloud` to manage your project resources from your local system.
+### 2) Authorize `gcloud` to manage your project resources from your local system
 
 ```text
 gcloud auth login
 ```
 
-### 3) Create a `gcloud` configuration for managing your project locally:
+### 3) Create a `gcloud` configuration for managing your project locally
 
 An easy way to keep track of your local configurations is to name them after
 your Google Cloud projects.
@@ -41,7 +41,7 @@ It can be any API. I just chose pubsub since I was planning to create a demo for
 gcloud services enable pubsub.googleapis.com
 ```
 
-### 5) Authorize your application code to connect to Google Cloud services:
+### 5) Authorize your application code to connect to Google Cloud services
 
 This is similar to using a service account, but without the risks that come
 along with that in a local development environment. This is considered a best
@@ -61,6 +61,7 @@ time dart main.dart
 ```
 
 Output:
+
 ```text
 $ time dart main.dart
 closing client...
@@ -76,7 +77,6 @@ sys     0m0.217s
 
 This demonstrates an issue with the client taking more than 15 seconds to exit,
 whether or not close() is invoked.
-
 
 #### 6.1)
 
@@ -109,6 +109,7 @@ class AutoRefreshingClient extends AutoRefreshDelegatingClient {
     );
   }
 ```
+
 Time the app now, app exits immediately.
 
 ```text
@@ -116,6 +117,7 @@ time dart main.dart
 ```
 
 Output:
+
 ```text
 closing client...
 client should be closed
