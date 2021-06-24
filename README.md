@@ -126,3 +126,28 @@ real    0m1.120s
 user    0m1.243s
 sys     0m0.215s
 ```
+
+#### 6.2)
+
+Alternatively, modify: `~/.pub-cache/hosted/pub.dartlang.org/googleapis_auth-1.1.0/lib/src/adc_utils.dart`
+
+After line 51 (`quotaProject:...`), add `closeUnderlyingClient: true,`
+
+```dart
+    return AutoRefreshingClient(
+      baseClient,
+      clientId,
+      await refreshCredentials(
+        clientId,
+        AccessCredentials(
+          // Hack: Create empty credentials that have expired.
+          AccessToken('Bearer', '', DateTime(0).toUtc()),
+          credentials['refresh_token'] as String?,
+          scopes,
+        ),
+        baseClient,
+      ),
+      quotaProject: credentials['quota_project_id'] as String?,
+      closeUnderlyingClient: true,
+    );
+```
