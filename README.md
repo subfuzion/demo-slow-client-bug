@@ -35,6 +35,8 @@ gcloud config set project PROJECT-ID
 
 ### 4) Enable the pubsub API
 
+It can be any API. I just chose pubsub since I was planning to create a demo for this anyway.
+
 ```text
 gcloud services enable pubsub.googleapis.com
 ```
