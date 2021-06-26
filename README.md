@@ -1,3 +1,7 @@
+> The [issue](https://github.com/google/googleapis.dart/issues/252) demonstrated here was fixed with
+this [pull request](https://github.com/google/googleapis.dart/pull/253). Until a new version is published
+to pub.dev, [pubspec.yaml](./pubspec.yaml) has been updated to use the commit for the fix.
+
 # Set up
 
 ### 1) [Create](https://console.cloud.google.com/projectcreate) a new project in the cloud console

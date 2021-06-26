@@ -8,5 +8,11 @@ environment:
 
 dependencies:
   googleapis: ^3.0.0
-  googleapis_auth: ^1.1.0
+#  googleapis_auth: ^1.1.0
+  googleapis_auth:
+    git:
+      url: git@github.com:google/googleapis.dart
+      path: googleapis_auth
+      ref: 072dd0c0c98f8639ade8938d86da9826709c7454
   http: ^0.13.3
+
